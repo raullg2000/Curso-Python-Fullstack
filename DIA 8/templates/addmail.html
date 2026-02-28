@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Afegir Nou Usuari</h1>
+    <form method="POST">
+        Nom: <input type="text" name="nom" required><br><br>
+        Mail: <input type="email" name="email" required><br><br>
+        <button type="submit">Guardar a la BD</button>
+    </form>
+
+    {% if missatge %}
+        <p><b>{{ missatge }}</b></p>
+    {% endif %}
+
+    <p><a href="/getmail">Anar al cercador (getmail)</a></p>
+</body>
+</html>

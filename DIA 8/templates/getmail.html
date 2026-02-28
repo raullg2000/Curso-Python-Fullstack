@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Cercador de Mail</h1>
+    <form method="POST">
+        Nom a buscar: <input type="text" name="nom" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if email %}
+    <div style="margin-top: 20px; border: 1px solid green; padding: 10px;">
+        <p>Resultat per a <b>{{ nom }}</b>:</p>
+        Email: <input type="text" value="{{ email }}" readonly>
+    </div>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <p><a href="/addmail">Anar a afegir un nou mail (addmail)</a></p>
+</body>
+</html>
